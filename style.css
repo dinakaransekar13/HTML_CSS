@@ -1,0 +1,189 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* header  */
+header{
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+header img{
+    height: 45px;
+}
+
+/* Banner */
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+.banner h2{
+    position: absolute;
+    top: 30%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5294117647058824);
+    border-radius: 10px;
+    left: 20px;
+    text-align: center;
+    color: white;
+}
+.banner{
+    position: relative;
+}
+.banner h2 span{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* navigation */
+nav{
+    background-color: lightgrey;
+    position: sticky;
+    top: 80px;
+}
+nav li{
+    display: inline-block;
+    width: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: darkblue;
+}
+nav ul{
+    white-space: nowrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* main */
+article p::selection{
+    background-color: yellow;
+}
+article p::first-letter{
+    font-size: 1.5em;
+}
+
+article{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+article h2,h3{
+    color: darkblue;
+}
+article p{
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+article ul,li {
+    display: inline-block;
+    display: flex;
+    padding: 10px ;
+}
+article ul li img{
+    width: 90%;
+    max-height: 90%;
+    transition: transform .1s;
+}
+
+article ul li img:hover{
+    transform: scale(1.01);
+}
+
+/* state section */
+
+section.states{
+    background-color: rgb(9, 9, 201);
+}
+.state-list{
+    max-width: 900px;
+    margin: 0 auto;
+    column-count: 4;
+    column-gap: 70px;
+    padding: 20px;
+}
+section ul li a{
+    text-decoration: none;
+    color: white;
+    line-height: 25px;
+}
+
+/* footer */
+
+footer{
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(9, 9, 201);
+    color: white;
+}
+hr{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* pseudo */
+nav ul li:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Break points */
+
+/*xs / small - 576 px
+medium - 768px
+large - 992 px
+xl - 1200px
+xxl - 1400px
+*/
+
+
+@media screen and (max-width:720px) {
+    header{
+        position: static;
+        background: transparent;
+    }
+    .banner h2{
+        position: static;
+        border-radius: 0;
+        display: block;
+        margin: 0;
+        font-size: 0.9em;
+    }
+    nav li{
+        display: block;
+        line-height: 3px;
+        top: 50px;
+    }
+    nav{
+        top: 0;
+    }
+    .state-list{
+        column-count: 2;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .banner h2{
+        top: 100px;
+        font-size: 1em;
+    }
+    nav{
+        position: static;
+        
+    }
+}
+
+@media screen and (max-width:728px) {
+    nav li{
+        position: static;
+        display: block;
+    }
+}
